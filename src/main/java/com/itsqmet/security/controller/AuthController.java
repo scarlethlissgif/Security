@@ -70,13 +70,12 @@ public class AuthController {
                     "SPRING_SECURITY_CONTEXT",
                     SecurityContextHolder.getContext()
             );
-
             Map<String, String> respuesta = new HashMap<>();
             respuesta.put("mensaje", "Login exitoso");
             respuesta.put("usuario", username);
 
             return ResponseEntity.ok(respuesta);
-
+ //cambiar de lugar el return
         } catch (AuthenticationException e) {
 
             Map<String, String> error = new HashMap<>();
